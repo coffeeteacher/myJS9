@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">我是段落</p>
+    <button onclick="btnClick()">Click</button>
+
+    <script>       
+
+        // 改變段落內容
+        // 1.取得段落的位置
+        // 2.使用innerHTML改變內容
+        // 建立一個函式，等待被執行
+        function btnClick(){
+            document.getElementById("demo").innerHTML="JavaScript";
+        }
+    </script>
+</body>
+</html>
