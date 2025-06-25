@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 奇偶數檢查
+        // 跟2相除取餘數（1=>奇數, 0=>偶數）
+        // 方法1
+        var num = 10;
+        if (num % 2 == 0) {
+            console.log(`${num}是偶數`);
+        } else {
+            console.log(`${num}是奇數`);
+        }
+
+        // 方法2：把重覆與不重覆的部份獨立出來處理
+        var num2 = 11;
+        var result2 = "偶數";
+        if (num2 % 2 == 1) {
+            // 指派（給值）
+            result2 = "奇數";
+        }
+        console.log(`${num2}是${result2}`);
+
+
+
+        // 成績檢查（有效分數範圍:0-100）
+        // var score = -1;
+        // if (score > 100 || score < 0) {
+        //     alert("分數err");
+        // } else {
+        //     if (score >= 60) {
+        //         console.log("及格");
+        //     } else {
+        //         console.log("不及格");
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 宣告二個變數存放資料        
+        var a = 5;
+        var b = 3;
+        // 並且加總結果給另一個變數
+        // var c = a + b;
+        // 查看結果 5+3=8
+        // console.log(a + "+" + b + "=" + c);
+
+        // 改用樣板字串template string（字串字面值）
+        // 使用反引號（``），變數部份${變數名稱}
+        // console.log(`${a}+${b}=${a + b}`);
+
+        // 檢查（if）分數是否及格？
+        var score = 90;
+        // console.log(score >= 60);
+        // 判斷式
+        if (score >= 60) {
+            // 條件成立
+            // console.log("及格");
+            // 90分=>及格
+            // 寫法1
+            console.log(score + "分=>及格");
+            // 寫法2
+            console.log(`${score}分=>及格`);
+        } else {
+            // 條件不成立
+            // console.log("不及格");
+            // 55分=>不及格
+            // 寫法1
+            console.log(score + "分=>不及格");
+            // 寫法2
+            console.log(`${score}分=>不及格`);
+        }
+    </script>
+</body>
+
+</html>

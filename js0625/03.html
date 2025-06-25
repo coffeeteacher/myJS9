@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 四則運算
+        var a = 5;
+        var b = 3;
+
+        // 宣告一個存放運算符號的變數
+        var op = "*";
+
+        switch (op) {
+            case "+":
+                console.log(`${a}+${b}=${a + b}`);
+                break;  // 結束switch
+            case "-":
+                console.log(`${a}-${b}=${a - b}`);
+                // break;
+            case "*":
+                console.log(`${a}*${b}=${a * b}`);
+                break;
+            case "/":
+                console.log(`${a}/${b}=${a / b}`);
+                break;
+            case "%":
+                console.log(`${a}%${b}=${a % b}`);
+                break;
+            case "**":
+                console.log(`${a}**${b}=${a ** b}`);
+                break;
+
+            default:
+                // 以上條件都不成立
+                console.log("運算符號不存在=>" + op);
+                break;
+        }
+
+        // if (op == "+") {
+        //     // 加
+        //     console.log(`${a}+${b}=${a + b}`);
+        // } else if (op == "-") {
+        //     // 減
+        //     console.log(`${a}-${b}=${a - b}`);
+        // } else if (op == "*") {
+        //     // 乘
+        //     console.log(`${a}*${b}=${a * b}`);
+        // } else if (op == "/") {
+        //     // 除
+        //     console.log(`${a}/${b}=${a / b}`);
+        // } else if (op == "%") {
+        //     // 取餘數
+        //     console.log(`${a}%${b}=${a % b}`);
+        // } else if (op == "**") {
+        //     // 次方數
+        //     console.log(`${a}**${b}=${a ** b}`);
+        // } else {
+        //     // 以上條件都不成立
+        //     console.log("運算符號不存在=>" + op);
+        // }
+
+    </script>
+</body>
+
+</html>
