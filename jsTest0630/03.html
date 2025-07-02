@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  
+    請設計一個分數等級程式
+
+    80 - 100 => 甲
+    70 -   79 => 乙
+    60 -   69 => 丙
+    0  -   59 => 丁
+
+    測試情境：
+    分數：82 => 成績等級為甲等
+    -->
+    <script>
+        var intScore = 101;
+        var strLevel = "";
+
+        if (intScore < 0 || intScore > 100) {
+            console.log("err!不是有效數值範圍");
+        } else {
+            if (intScore >= 80 && intScore <= 100) {
+                strLevel = "甲";
+            } else if (intScore >= 70 && intScore <= 79) {
+                strLevel = "乙";
+            } else if (intScore >= 60 && intScore <= 69) {
+                strLevel = "丙";
+            } else {
+                strLevel = "丁";
+            }
+            console.log(`分數：${intScore} => 成績等級為${strLevel}等`);
+        }
+
+    </script>
+</body>
+
+</html>

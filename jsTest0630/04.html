@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  
+    請設計一個票價費用試算程式：請輸入票價種類與張數，計算出票價的總計
+
+    票價種類：
+    1. 全票 => 500元
+    2. 優待票為全票的八折
+    3. 敬老票為優待票的七折
+
+    測試情境1：
+    票價種類(1-3) => 1
+    張數 => 2
+    顯示「全票2張，票價為：1000元」
+
+    測試情境2：
+    票價種類(1-3) => 2
+    張數 => 3
+    顯示「優待票3張，票價為：1200元」
+
+    測試情境3：
+    票價種類(1-3) => 3
+    張數 => 2
+    顯示「敬老票2張，票價為：560元」
+    -->
+
+    <script>
+        // 票價種類
+        var ticketType = 1;     // 票價種類
+        var ticketPrice = 0;    // 單一票價價格
+        var ticketName = "";    // 票價名稱
+        var ticketNum = 2;      // 票價張數
+        var errFlag = "N";      // 存放是否錯誤(識別變數)
+
+        switch (ticketType) {
+            default:
+                console.log("err!票種類別不存在")
+                errFlag = "Y";
+                break;
+            case 1: // 全票
+                ticketPrice = 500;
+                ticketName = "全票";
+                break;
+            case 2: // 優待票
+                ticketPrice = 500 * 0.8;
+                ticketName = "優待票";
+                break;
+            case 3: // 敬老票
+                ticketPrice = 500 * 0.8 * 0.7;
+                ticketName = "敬老票";
+                break;
+        }
+        if (errFlag == "N") {
+            console.log(`${ticketName}${ticketNum}張, 票價為：${ticketPrice * ticketNum}`);
+        }
+
+    </script>
+</body>
+
+</html>
