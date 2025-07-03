@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1-10的合計
+        /*
+        累計 => s=s+i
+        s=0
+        i=1 => s=0+1=1
+        i=2 => s=1+2=3
+        i=3 => s=3+3=6
+        i=4 => s=6+4=10
+        ...
+        */
+
+        var s = 0;
+        for (var i = 1; i <= 10; i++) {
+            s = s + i;
+        }
+        document.write("1+2+3+...+10=" + s);
+
+        // 請統計1-100之間的奇數合？
+        document.write("<hr>請統計1-100之間的奇數合?<br>");
+        // 因為前面s變數有定義過，所以若要重新使用的話，s變數值要設定為0
+        // s=0;
+
+
+        var s1 = 0;
+        // 寫法1
+        for (var i = 1; i <= 100; i = i + 1) {
+            if (i % 2 == 1) {
+                s1 = s1 + i;
+            }
+        }
+        document.write(`1-100的奇數合=${s1}<br>`);
+        // 寫法2 => 等差為2
+        s1 = 0;
+        for (var i = 1; i <= 100; i = i + 2) {
+            s1 = s1 + i;
+        }
+        document.write(`1-100的奇數合=${s1}`);
+
+
+        // 請統計100-1之間的偶數合？
+        document.write("<hr>請統計100-1之間的偶數合?<br>");
+        // 寫法1 => 檢查每個值是否為偶數
+        var s2 = 0;
+        for (var i = 100; i >= 1; i = i - 1) {
+            if (i % 2 == 0) {
+                s2 = s2 + i;
+            }
+        }
+        document.write(`100-1的偶數合=${s2}<br>`);
+        // 100+98+96+...+2
+        // 寫法2 => 等差值
+        s2 = 0;
+        for (var i = 100; i >= 2; i = i - 2) {
+            s2 = s2 + i;
+        }
+        document.write(`100-1的偶數合=${s2}`);
+
+        // 請統計1-100之間的3的倍數同時也是5的倍數合與列出數字？
+        document.write("<hr>請統計1-100之間的3的倍數同時也是5的倍數合與列出數字?<br>");
+
+        // 取得最後一個值（同時是3與5的倍數）
+        var endValue = 0;
+        for (var i = 100; i >= 1; i--) {
+            if (i % 3 == 0) {
+                if (i % 5 == 0) {
+                    endValue = i;   // 已經找到最後一個值了
+                    break;          // 結束迴圈
+                }
+            }
+        }
+
+        // 寫法1 => 巢狀檢查
+        var s3 = 0;
+        for (var i = 1; i <= 100; i++) {
+            // 檢查是否為3的倍數
+            if (i % 3 == 0) {
+                // 檢查是否為5的倍數
+                if (i % 5 == 0) {
+                    s3 = s3 + i;
+                    document.write(i);
+                    if (i == endValue) {
+                        document.write("=");
+                        break;  // 因為已經找到最後值，所以結束迴圈
+                    } else {
+                        document.write("+");
+                    }
+                }
+            }
+        }
+        document.write(s3);
+        document.write("<br>");
+
+        // 寫法2 => 邏輯運算子 => &&
+        s3 = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                s3 = s3 + i;
+                document.write(i);
+                if (i == endValue) {
+                    document.write("=");
+                    break;  // 因為已經找到最後值，所以結束迴圈
+                } else {
+                    document.write("+");
+                }
+            }
+        }
+        document.write(s3);
+
+    </script>
+</body>
+
+</html>
