@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 標籤 -->
+    <label for="n1">數值1</label>
+    <!-- 文字方塊 -->
+    <input type="number" id="n1">
+    <p>
+        <button onclick="calc('+')">+</button>
+        <button onclick="calc('-')">-</button>
+        <button onclick="calc('*')">*</button>
+        <button onclick="calc('/')">/</button>
+    </p>
+    <label for="n2">數值2</label>
+    <input type="number" id="n2">
+    <br>
+    <p id="result">結果</p>
+
+    <script>
+        var n1 = document.getElementById("n1");
+        var n2 = document.getElementById("n2");
+        var result = document.getElementById("result");        
+
+        function calc(op) {
+            switch (op) {
+                case '+':
+                    result.textContent = parseInt(n1.value) + parseInt(n2.value);
+                    break;
+                case '-':
+                    result.textContent = parseInt(n1.value) - parseInt(n2.value);
+                    break;
+                case '*':
+                    result.textContent = parseInt(n1.value) * parseInt(n2.value);
+                    break;
+                case '/':
+                    result.textContent = (parseInt(n1.value) / parseInt(n2.value)).toFixed(2);
+                    break;
+            }            
+        }
+    </script>
+</body>
+
+</html>

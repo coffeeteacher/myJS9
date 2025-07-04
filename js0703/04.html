@@ -12,7 +12,7 @@
     <input type="number" id="n1">
     <br>
     <label for="">數值2</label>
-    <input type="number">
+    <input type="number" id="n2">
     <button onclick="tot()">加總</button>
     <br>
     <p id="result">合計結果</p>
@@ -26,7 +26,10 @@
             var n2 = document.getElementById("n2");
 
             // 取得數值1的內容，顯示在指定的位置
-            console.log(n1);
+            console.log(n1.value);
+            console.log(n2.value);
+            console.log(n1.value+n2.value);
+            document.getElementById("result").textContent=n1.value+n2.value;
 
         }
     </script>

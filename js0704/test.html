@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1>成績輸入</h1>
+    <p>請輸入成績N次, 直到輸入-1時結束</p>
+    <p>並統計出如下</p>
+    <ul>
+        <li>及格人數</li>
+        <li>不及格人數</li>
+        <li>全班總分</li>
+        <li>全班平均</li>
+    </ul>
+    <hr> -->
+    <h2>成績結果</h2>
+    <p id="result">結果</p>
+
+    <script>
+        var pass = 0;   // 及格
+        var fail = 0;   // 不及格   
+        var tot = 0;    // 總分
+        var avg = 0.0;  // 總平均
+
+        while (1) {
+            var score = prompt("請輸入分數");
+
+            // 檢查是否取消
+            if (score == null) {
+                pass = 0;
+                fail = 0;
+                tot = 0;
+                avg = 0.0;
+                alert("您按了取消，即將結束輸入!");
+                break;
+            }
+            // 檢查是否空白
+            // 去除資料前後的空白 => trim()
+            if (score.trim() == "") {
+                alert("不能空白!請重新輸入");
+                continue;
+            }
+
+            // 有資料
+            // 檢查是否結束
+            if (score == "-1") {
+                alert("成績輸入結束！")
+                break;
+            }
+
+            // 字串轉數字
+            score = Number(score);
+
+            // 檢查是否為數字
+            if (isNaN(score)) {
+                alert("非數字！請重新輸入");
+                continue;
+            } else if (score < 0 || score > 100) {
+                alert("不是有效範圍！請重新輸入0-100之間");
+                continue;
+            }
+
+            // 檢查是否及格
+            if (score >= 60) {
+                pass++; // 及格人數+1
+            } else {
+                fail++; // 不及格人數+1
+            }
+
+            // 總分
+            tot = tot + score;
+        }
+
+        // 平均
+        if (pass + fail > 0) {
+            avg = tot / (pass + fail);
+        }
+
+        // 顯示結果
+        var result = document.getElementById("result");
+        result.innerHTML = `
+            　及格：${pass}人<br>
+            不及格：${fail}人<br>
+            　總分：${tot}分<br>
+            總平均：${avg.toFixed(2)}分
+        `;
+
+    </script>
+</body>
+
+</html>
