@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>顯示陣列中所有資料的方法</h2>
+    <hr>
+
+    <script>
+        let arr1 = [1, 2, 3, 4, 5, "12345"];
+
+        // 方法一：for
+        console.log("for----");
+        for (let i = 0; i < arr1.length; i++) {
+            console.log(arr1[i]);
+        }
+
+        // 方法二：for of
+        // 語法
+        /*
+        for(let 變數 of 陣列名稱){
+            ...
+        }
+        */
+        console.log("for--of--");
+        for (let n of arr1) {
+            console.log(n);
+        }
+
+        // 方法三：forEach
+        // 語法
+        /*
+        陣列名稱.forEach((變數)=>{
+            ...
+        })
+        */
+        console.log("forEach-----");
+        arr1.forEach((n) => {
+            console.log(n);
+        })
+
+
+    </script>
+</body>
+
+</html>

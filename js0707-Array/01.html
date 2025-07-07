@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        let sc1=90;
+        let sc2=99;
+        let sc3=100;
+        ...
+        let sc27=99;
+        */
+
+        // 合法的陣列宣告
+        // 空陣列=>不確定陣列長度時可用
+        let arr1 = [];
+        console.log(arr1);
+        console.log(typeof arr1);
+
+        // 宣告一個存放數值資料的陣列
+        let arr2 = [1, 2, 3];
+        console.log("更改前"+arr2);
+        console.log(typeof arr2);
+        arr2[1]="5";  // 將陣列編號1的內容換成5
+        console.log("更改後"+arr2);
+        // 查看更改後的陣列編號1的內容
+        console.log(arr2[1]);
+
+
+        // 宣告一個存放字串資料的陣列
+        let arr3 = ["1", "2", "3"];
+        console.log(arr3);
+        console.log(typeof arr3);
+
+        // 宣告一個存放各式型別資料的陣列
+        let arr4 = [1, "2", true, [], { book: "js" }];
+        console.log(arr4);
+        console.log(typeof arr4);
+
+    </script>
+</body>
+
+</html>

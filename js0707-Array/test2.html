@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 找出陣列中最大值與最小值
+        let arr1 = [5, 60, 3, 90, 33, 1, 100];
+        let max = arr1[0];
+        let min = arr1[0];
+
+        // for
+        for (let i = 0; i < arr1.length; i++) {
+
+            if (arr1[i] > max) {    // 檢查是否比目前的max大                
+                max = arr1[i];
+            } else if (arr1[i] < min) { // 檢查是否比目前的min小                
+                min = arr1[i];
+            }
+        }
+        console.log(`max=${max}, min=${min}`);
+
+        // for of
+        max = arr1[0];
+        min = arr1[0];
+        for (let n of arr1) {
+            if (n > max) {
+                max = n;
+            } else if (n < min) {
+                min = n;
+            }
+        }
+        console.log(`max=${max}, min=${min}`);
+
+        // forEach
+        max = arr1[0];
+        min = arr1[0];
+        arr1.forEach((n) => {
+            if (n > max) {
+                max = n;
+            } else if (n < min) {
+                min = n;
+            }
+        })
+        console.log(`max=${max}, min=${min}`);
+
+        // map
+        max = arr1[0];
+        min = arr1[0];
+        arr1.map((n) => {
+            if (n > max) {
+                max = n;
+            } else if (n < min) {
+                min = n;
+            }
+        })
+        console.log(`max=${max}, min=${min}`);
+
+        // sort
+        arr1.sort((a, b) => {
+            return a - b; // 遞增排序
+        });
+        console.log(arr1);
+        console.log(`max=${arr1[arr1.length - 1]}, min=${arr1[0]}`);
+
+        // 數學類別
+        // 最大值 => Math.max()
+        // 最小值 => Math.min()
+        max = Math.max(...arr1);
+        min = Math.min(...arr1);
+        console.log(`max=${max}, min=${min}`);
+
+    </script>
+</body>
+
+</html>
