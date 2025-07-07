@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>猜數字</h2>
+    <p id="result"></p>
+
+    <!-- 使用輸入視窗 -->
+    <script>
+        // 取得亂數值
+        let rd = Math.floor(Math.random() * 100) + 1;
+        // let rd = 88;
+        let min = 1;
+        let max = 100;
+        let count = 0;  // 存放執行次數
+        let strMsg = "";  // 存放每次執行後的訊息
+        let str1 = "";    // 存放當前執行後的訊息
+
+        while (1) {
+            count++;
+            let keyNum = prompt(`請輸入任意數:${min}-${max}`);
+
+            if (keyNum == null) {
+                alert('您放棄猜數字，即將結束')
+                break;
+            }
+            if (keyNum.trim() == "") {
+                alert('不能空白，請重新輸入');
+                continue;
+            }
+            // 有資料時的處理
+            keyNum = parseInt(keyNum);
+            if (isNaN(keyNum)) {
+                alert('非數字，請重新輸入');
+                continue;
+            }
+
+            // 是否有效範圍
+            if (keyNum <= 0 || keyNum > 100) {
+                alert('有效範圍錯誤 => 1-100')
+                continue;
+            }
+
+            if (keyNum === rd) {
+                str1 = `第${count}次, Bingo, 恭喜您猜對了!`;
+                alert(str1)
+                strMsg += str1 + "<br>";
+                break;
+            }
+
+            if (keyNum > rd) {
+                max = keyNum;
+                str1 = `第${count}次, 太大了，提示「${min}-${max}」`;
+                alert(str1);
+                strMsg += str1 + "<br>";
+            } else {
+                min = keyNum;
+                str1 = `第${count}次, 太小了，提示「${min}-${max}」`;
+                alert(str1);
+                strMsg += str1 + "<br>";
+            }
+        }
+        // document.write(strMsg);
+        // let result = document.getElementById('result');
+        // result.innerHTML = strMsg;
+        document.getElementById('result').innerHTML = strMsg;
+
+    </script>
+
+</body>
+
+</html>
