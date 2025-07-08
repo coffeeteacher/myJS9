@@ -53,14 +53,15 @@
                 break;
             }
 
-            // 字串轉數字
-            score = Number(score);
-
             // 檢查是否為數字
             if (isNaN(score)) {
                 alert("非數字！請重新輸入");
                 continue;
-            } else if (score < 0 || score > 100) {
+            }
+
+            // 字串轉數字
+            score = parseInt(score);
+            if (score < 0 || score > 100) {
                 alert("不是有效範圍！請重新輸入0-100之間");
                 continue;
             }

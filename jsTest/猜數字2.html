@@ -40,14 +40,21 @@
         function btnClick() {
             count++;
             txtNo = document.getElementById("txtNo");
-            let keyNum = parseInt(txtNo.value);
-            // 查檢是否空白
+            let keyNum = txtNo.value;
+            // 查檢是否非數字
             if (isNaN(keyNum)) {
+                alert('非數字，請重新輸入');
+                txtNo.focus();
+                return;
+            }
+
+            if(keyNum.trim()===""){
                 alert('不能空白，請重新輸入');
                 txtNo.focus();
                 return;
             }
 
+            keyNum = parseInt(txtNo.value);
             // 檢查是否結束遊戲
             if (keyNum == -1) {
                 return;

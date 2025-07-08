@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = ['html', 'css', 'js', 'figma', 'ui'];
+
+        // 尋找陣列中是否有CSS的內容
+        // 方法1：使用迴圈逐一比對
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === "css") {
+                console.log(`css找到了, 在第${i}個位置`);
+                break;
+            }
+        }
+        // 方法2：indexOf(item)=>尋找陣列中指定的元素，回傳第一次被找到的位置，-1表示找不到
+        // 預設找不到
+        let searchIndex = arr1.indexOf("css");
+        if (searchIndex !== -1) {
+            console.log(`找到了, 在第${searchIndex}個位置`);
+        } else {
+            console.log("不存在");
+        }
+
+        // includes(item)=>是否有找到指定的元素，回傳true或false
+        // let find = arr1.includes("css");
+        // 使用三元運算子的寫法
+        // (條件式)？條件成立：條件不成立
+        (arr1.includes("css")) ? console.log("找到了") : console.log("不存在");
+
+        // if (find) {
+        //     console.log("找到了");
+        // } else {
+        //     console.log("不存在");
+        // }
+
+    </script>
+</body>
+
+</html>

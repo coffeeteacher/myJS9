@@ -35,12 +35,14 @@
                 alert('不能空白，請重新輸入');
                 continue;
             }
-            // 有資料時的處理
-            keyNum = parseInt(keyNum);
+            
             if (isNaN(keyNum)) {
                 alert('非數字，請重新輸入');
                 continue;
             }
+
+            // 有資料時的處理
+            keyNum = parseInt(keyNum);
 
             // 是否有效範圍
             if (keyNum <= 0 || keyNum > 100) {

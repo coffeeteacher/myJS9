@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>陣列中的每個值*2</h2>
+    <hr>
+    <script>
+        let arr1 = [1, 3, 7, 100, 234];
+        let arr2 = [];
+
+        // 陣列中的每個值*2
+        // 方法1
+        for (let i = 0; i < arr1.length; i++) {
+            arr2[i] = arr1[i] * 2;
+        }
+        console.log(arr2);
+
+        // 方法2：使用map
+        // let arr3 = arr1.map((n)=>{
+        //     return n*2;
+        // })
+        // 若區塊中的程式敘述只有一行，
+        // 可以省固return與{}
+        let arr3 = arr1.map((n) => n * 2)
+        console.log(arr3);
+    </script>
+</body>
+
+</html>
