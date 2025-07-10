@@ -23,7 +23,7 @@ function lott1() {
         // 亂數取號碼
         let lottNo = Math.floor(Math.random() * 38) + 1;
         // 檢查是否重覆
-        if (lott.includes(lottNo) == false) {   // 沒有重覆
+        if (!lott.includes(lottNo)) {   // 沒有重覆
             lott.push(lottNo);  // 增加號碼到陣列中            
         }
     }
