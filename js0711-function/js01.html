@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>函式</h1>
+    <hr>
+    請輸入姓名：<input type="text" id="name">
+    <button onclick="sayHi4(getName())">確定</button>
+    <p id="show"></p>
+    <script>
+
+        function sayHi4(uName) {            
+            // 取得顯示資料位置
+            let show = document.getElementById("show");
+            show.textContent = "Hi,"+uName;
+        }
+
+        // 取得姓名
+        function getName() {
+            let name = document.getElementById("name").value;
+            return name;
+        }
+
+        // 建立函式
+        // 有參數，沒有傳回值
+        // function sum(a, b) {
+        //     // let a=5;
+        //     // let b=3;
+        //     console.log(a + b);
+        // }
+        // sum(5, 3);
+
+        // 有參數，有傳回值
+        // function sum(a, b) {
+        //     // let c = a + b;
+        //     // return c;
+        //     return a + b;
+        // }
+
+
+        // 呼叫函式
+        // console.log(sum(5, 3));   //8
+        // let n1 = 50;
+        // let n2 = 30;
+        // let tot = sum(n1, n2); //80
+        // console.log(`${n1}+${n2}=${tot}`);
+
+        // 無參數，無傳回值
+        function sayHi() {
+            alert("Hi");
+        }
+        // sayHi();
+
+        // 有參數，無傳回值
+        function sayHi2(name) {
+            alert("Hi," + name);
+        }
+        // let userName = prompt("請輸入姓名");
+        // sayHi2(userName)
+
+        // 無參數，無傳回值(for 表單文字方塊)
+        function sayHi3() {
+            // 取得文字方塊位置
+            let name = document.getElementById("name");
+            // 取得顯示資料位置
+            let show = document.getElementById("show");
+            // 純文字
+            // show.textContent = "Hi," + name.value;
+            // 含有HTML標籤
+            // show.innerHTML = "Hi,<br>" + name.value;
+            // 使用跳脫字元
+            show.innerText = "Hi,\n" + name.value;
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

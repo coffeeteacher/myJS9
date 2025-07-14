@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">請輸入姓名</label>
+    <input type="text" id="name">
+    <button onclick="sayHi2(getName())">確定</button>
+    <p id="showData"></p>
+
+    <script>
+        // 寫法2：有參數，無傳回值
+        function sayHi2(userName) {
+            // 取得顯示段落
+            let showData = document.getElementById("showData");
+
+            // 顯示結果
+            showData.textContent = `Hi, ${userName}`;
+        }
+
+        // 取得姓名（無參數，有傳回值）        
+        function getName() {
+            // 取得文字方塊內容
+            let name1 = document.getElementById("name").value;
+            return name1;
+        }
+    </script>
+
+    <!--  
+    <label for="name">請輸入姓名</label>
+    <input type="text" id="name">
+    <button onclick="sayHi1()">確定</button>
+    <p id="showData"></p>
+    <script>
+        // 寫法1：無參數，無傳回值
+        function sayHi1() {
+            // 取得文字方塊內容
+            let name1 = document.getElementById("name").value;
+
+            // 取得顯示段落
+            let showData = document.getElementById("showData");
+
+            // 顯示結果
+            showData.textContent = `Hi, ${name1}`;
+        }
+    </script>
+    -->
+
+</body>
+
+</html>

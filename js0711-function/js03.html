@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 二數相加 -->
+    <script>
+        // 無參數，無傳回值
+        function add1(){
+            let a=5;
+            let b=3;
+            console.log(a+b);
+        }
+        add1();
+
+        // 無參數，有傳回值
+        function add2(){
+            let a=5;
+            let b=3;
+            return a+b;
+        }
+        console.log(add2());
+
+        // 有參數，無傳回值
+        function add3(n1, n2){
+            console.log(n1+n2);    
+        }
+        add3(5,3);
+
+        // 有參數，有傳回值
+        function add4(n1, n2){
+            return n1+n2;
+        }
+        let tot=add4(5,3);
+        console.log(tot);
+
+    </script>
+</body>
+</html>
