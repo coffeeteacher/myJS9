@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 顯示陣列中的值
+        function showData(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+            }
+        }
+
+        let score = [99, 100, 30];
+        // 呼叫函式，沒有傳回值
+        showData(score);
+
+        // 傳入陣列資料*2後，傳回陣列結果
+        function arrDouble(arr) {
+            let newArry = [];
+            for (let i = 0; i < arr.length; i++) {
+                newArry.push(arr[i] * 2);
+            }
+            return newArry;
+        }
+        console.log(arrDouble(score));
+
+    </script>
+</body>
+
+</html>
